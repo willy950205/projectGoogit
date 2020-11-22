@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
@@ -40,7 +41,7 @@ public class Message {
 	private Meeting meeting;
 	
 	//index
-	@OneToOne
+	@OneToMany
 	@JoinColumn(name = "index_id")
 	private Index index;
 	
