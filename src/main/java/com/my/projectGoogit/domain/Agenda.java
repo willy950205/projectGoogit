@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -23,38 +23,26 @@ import lombok.Setter;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Message {
+public class Agenda {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_msg")
-	@SequenceGenerator(sequenceName = "seq_msg", name="seq_msg", allocationSize = 1 )
-	private Long messageId;
-	
-	
-	@ManyToOne
-	@JoinColumn(name = "member_id")
-	private Members members;
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_agenda")
+	@SequenceGenerator(sequenceName = "seq_agenda", name = "seq_agenda", allocationSize = 1)
+	private Long agendaId;
 	
 	@ManyToOne
 	@JoinColumn(name = "meeting_id")
 	private Meeting meeting;
 	
-	//index
-	@OneToOne
-	@JoinColumn(name = "index_id")
-	private Index index;
-	
-	//agenda
-	@ManyToOne
-	@JoinColumn(name = "agenda_id")
-	private Agenda agenda;
-	
-	private String messageContents;
-	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date startTime;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date messageContentsTime;
+	private Date endTime;
 	
-	private Integer messageLike;
+	private String agendaTitle;
 	
+	private String conclusion;
+	
+
 }

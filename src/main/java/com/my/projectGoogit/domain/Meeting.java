@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -23,38 +23,33 @@ import lombok.Setter;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Message {
-	
+public class Meeting {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_msg")
-	@SequenceGenerator(sequenceName = "seq_msg", name="seq_msg", allocationSize = 1 )
-	private Long messageId;
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_meeting")
+	@SequenceGenerator(sequenceName = "seq_meeting", name = "seq_meeting", allocationSize = 1)
+	private Long meetingId;
 	
+	@OneToMany
+	@JoinColumn(name = "reservation_id")
+	private Reservation reservation;
 	
 	@ManyToOne
 	@JoinColumn(name = "member_id")
 	private Members members;
 	
-	@ManyToOne
-	@JoinColumn(name = "meeting_id")
-	private Meeting meeting;
+	@Temporal(TemporalType.DATE)
+	private Date meetingDate;
 	
-	//index
-	@OneToOne
-	@JoinColumn(name = "index_id")
-	private Index index;
+	private String meetingSubtitle;
 	
-	//agenda
-	@ManyToOne
-	@JoinColumn(name = "agenda_id")
-	private Agenda agenda;
+	private String meetingDescription;
 	
-	private String messageContents;
+	private String hostId;
+	
+	private String meetingCode;
 	
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date messageContentsTime;
 	
-	private Integer messageLike;
 	
 }

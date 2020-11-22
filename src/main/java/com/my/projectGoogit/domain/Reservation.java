@@ -20,20 +20,13 @@ import lombok.Setter;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Members {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_member")
-	@SequenceGenerator(sequenceName = "seq_member", name="seq_member", allocationSize = 1 )
-	private Long memberId;
-	
-	private String email;
-	
-	private String name;
-	
-	private String pwd;
-	
-	@Temporal(TemporalType.DATE)
-	private Date regDate;
+public class Reservation {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_reservation")
+	@SequenceGenerator(sequenceName = "seq_reservation", name = "seq_reservation", allocationSize = 1)
+	private Long reservationId;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date meetingTime;
 }
