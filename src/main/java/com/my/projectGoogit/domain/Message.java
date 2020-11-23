@@ -41,9 +41,9 @@ public class Message {
 	private Meeting meeting;
 	
 	//index
-	@OneToMany
-	@JoinColumn(name = "index_id")
-	private Index index;
+	@OneToOne
+	@JoinColumn(name = "message_index_id")
+	private MessageIndex messageIndex;
 	
 	//agenda
 	@ManyToOne

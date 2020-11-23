@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -30,7 +31,7 @@ public class Meeting {
 	@SequenceGenerator(sequenceName = "seq_meeting", name = "seq_meeting", allocationSize = 1)
 	private Long meetingId;
 	
-	@OneToMany
+	@OneToOne
 	@JoinColumn(name = "reservation_id")
 	private Reservation reservation;
 	

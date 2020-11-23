@@ -16,12 +16,12 @@ import lombok.Setter;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Index {
+public class MessageIndex {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_index")
-	@SequenceGenerator(sequenceName = "seq_index", name="seq_index", allocationSize = 1 )
-	private Long indexId;
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_messageindex")
+	@SequenceGenerator(sequenceName = "seq_messageindex", name="seq_messageindex", allocationSize = 1 )
+	private Long MessageIndexId;
 	
 	private String indexName;
 
