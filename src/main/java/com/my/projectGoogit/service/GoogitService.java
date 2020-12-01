@@ -23,27 +23,27 @@ public interface GoogitService {
 	/**
 	 * member id로 조회
 	 * */
-	public Members membersSelectById();
+	public Members membersSelectById(Long id);
 	
 	/**
 	 * member email로 조회
 	 * */
-	public Members membersSelectByEmail();
+	public Members membersSelectByEmail(String email);
 	
 	/**
 	 * member 추가
 	 * */
-	public void membersInsert();
+	public void membersInsert(Members member);
 	
 	/**
 	 * member 수정
 	 * */
-	public void membersUpdate();
+	public void membersUpdate(Members member);
 	
 	/**
 	 * member 삭제
 	 * */
-	public void membersDelete();
+	public void membersDelete(Long id);
 	
 	//message table
 	/**
@@ -54,38 +54,38 @@ public interface GoogitService {
 	/**
 	 * message id로 조회
 	 * */
-	public Message messageSelectById();
+	public Message messageSelectById(Long id);
 	
 	/**
 	 * message member id로 조회
 	 * */
-	public List<Message> messageSelectByMemberId();
+	public List<Message> messageSelectByMemberId(Long memberId);
 	
 	/**
 	 * message index id로 조회
 	 * */
-	public List<Message> messageSelectByIndexId();
+	public List<Message> messageSelectByIndexId(Long indexId);
 	
 	/**
 	 * message agenda id로 조회
 	 * */
-	public List<Message> messageSelectByAgendaId();
+	public List<Message> messageSelectByAgendaId(Long agendaId);
 	
 	
 	/**
 	 * message 추가
 	 * */
-	public void messageInsert();
+	public void messageInsert(Message message);
 	
 	/**
 	 * message 수정
 	 * */
-	public void messageUpdate();
+	public void messageUpdate(Message message);
 	
 	/**
 	 * message 삭제
 	 * */
-	public void messageDelete();
+	public void messageDelete(Long id);
 
 	//index table
 	/**
@@ -96,27 +96,27 @@ public interface GoogitService {
 	/**
 	 * index id로 조회
 	 * */
-	public MessageIndex messageIndexSelectById();
+	public MessageIndex messageIndexSelectById(Long Id);
 	
 	/**
 	 * index name으로 조회
 	 * */
-	public List<MessageIndex> messageIndexSelectByName();
+	public List<MessageIndex> messageIndexSelectByName(String indexName);
 	
 	/**
 	 * index 추가
 	 * */
-	public void  messageIndexInsert();
+	public void  messageIndexInsert(MessageIndex messageIndex);
 	
 	/**
 	 * index 수정
 	 * */
-	public void messageIndexUpdate();
+	public void messageIndexUpdate(MessageIndex messageIndex);
 	
 	/**
 	 * index 삭제
 	 * */
-	public void messageIndexDelete();
+	public void messageIndexDelete(Long id);
 	
 	//participant table
 	/**
@@ -127,33 +127,33 @@ public interface GoogitService {
 	/**
 	 * participant id로 조회
 	 * */
-	public Participant participantSelectById();
+	public Participant participantSelectById(Long id);
 
 	/**
 	 * participant meeting id로 조회
 	 * */
-	public List<Participant> participantSelectByMeetingId();
+	public List<Participant> participantSelectByMeetingId(Long meetingId);
 	
 	/**
 	 * participant member id로 조회
 	 * */
-	public List<Participant> participantSelectByMemberId();
+	public List<Participant> participantSelectByMemberId(Long memberId);
 	
 	/**
 	 * participant 추가
 	 * */
-	public void participantInsert();
+	public void participantInsert(Participant participant);
 	
 	/**
 	 * participant 수정
 	 * */
-	public void participantUpdate();
+	public void participantUpdate(Participant participant);
 	
 	
 	/**
 	 * participant 삭제
 	 * */
-	public void participantDelete();
+	public void participantDelete(Long id);
 	
 	//meeting table
 	/**
@@ -164,27 +164,27 @@ public interface GoogitService {
 	/**
 	 * meeting id로 조회
 	 * */
-	public Meeting meetingSelectById();
+	public Meeting meetingSelectById(Long id);
 
 	/**
 	 * meeting 예약 id로 조회
 	 * */
-	public List<Meeting> meetingSelectByReservationId();
+	public List<Meeting> meetingSelectByReservationId(Long reservationId);
 	
 	/**
 	 * meeting 추가
 	 * */
-	public void meetingInsert();
+	public void meetingInsert(Meeting meeting);
 	
 	/**
 	 * meeting 수정
 	 * */
-	public void meetingUpdate();
+	public void meetingUpdate(Meeting meeting);
 	
 	/**
 	 * meeting 삭제
 	 * */
-	public void meetingDelete();
+	public void meetingDelete(Long id);
 	
 	//agenda table
 	/**
@@ -195,27 +195,27 @@ public interface GoogitService {
 	/**
 	 * agenda id로 조회
 	 * */
-	public Agenda agendaSelectById();
+	public Agenda agendaSelectById(Long id);
 	
 	/**
 	 * agenda meeting id로 조회
 	 * */
-	public List<Agenda> agendaMeetingByMeetingId();
+	public List<Agenda> agendaMeetingByMeetingId(Long meetingId);
 
 	/**
 	 * agenda 추가
 	 * */
-	public void agendaInsert();
+	public void agendaInsert(Agenda agenda);
 	
 	/**
 	 * agenda 수정
 	 * */
-	public void agendaUpdate();
+	public void agendaUpdate(Agenda agenda);
 	
 	/**
 	 * agenda 삭제
 	 * */
-	public void agendaDelete();
+	public void agendaDelete(Long id);
 	
 	//meeting_log table
 	/**
@@ -226,27 +226,27 @@ public interface GoogitService {
 	/**
 	 * meeting_log id로 조회
 	 * */
-	public MeetingLog meetingLogSelectById();
+	public MeetingLog meetingLogSelectById(Long id);
 	
 	/**
 	 * meeting_log meeting id로 조회
 	 * */
-	public MeetingLog meetingLogSelectByMeetingId();
+	public List<MeetingLog> meetingLogSelectByMeetingId(Long meetingId);
 
 	/**
 	 * meeting_log 추가
 	 * */
-	public void meetingLogInsert();
+	public void meetingLogInsert(MeetingLog meetingLog);
 
 	/**
 	 * meeting_log 수정
 	 * */
-	public void meetingLogUpdate();
+	public void meetingLogUpdate(MeetingLog meetingLog);
 	
 	/**
 	 * meeting_log 삭제
 	 * */
-	public void meetingLogDelete();
+	public void meetingLogDelete(Long id);
 	
 	//keyword table
 	/**
@@ -257,27 +257,27 @@ public interface GoogitService {
 	/**
 	 * keyword id로 조회
 	 * */
-	public Keyword keywordSelectById();
+	public Keyword keywordSelectById(Long id);
 	
 	/**
 	 * keyword meeting_log id로 조회
 	 * */
-	public Keyword keywordSelectByMeetigLog();
+	public List<Keyword> keywordSelectByMeetigLog(Long meetingLogId);
 	
 	/**
 	 * keyword 추가
 	 * */
-	public void keywordInsert();
+	public void keywordInsert(Keyword keyword);
 
 	/**
 	 * keyword 수정
 	 * */
-	public void keywordUpdate();
+	public void keywordUpdate(Keyword keyword);
 
 	/**
 	 * keyword 삭제
 	 * */
-	public void keywordDelte();
+	public void keywordDelte(Long id);
 	
 	//reservation table
 	/**
@@ -288,22 +288,22 @@ public interface GoogitService {
 	/**
 	 * reservation id로 조회
 	 * */
-	public Reservation reservationSelectById();
+	public Reservation reservationSelectById(Long id);
 	
 	/**
 	 * reservation 추가
 	 * */
-	public void reservationInsert();
+	public void reservationInsert(Reservation reservation);
 	
 	/**
 	 * reservation 수정
 	 * */
-	public void reservationUpdate();
+	public void reservationUpdate(Reservation reservation);
 	
 	/**
 	 * reservation 삭제
 	 * */
-	public void reservationDelete();
+	public void reservationDelete(Long id);
 
 	
 }

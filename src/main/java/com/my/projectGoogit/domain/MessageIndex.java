@@ -21,7 +21,7 @@ public class MessageIndex {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_messageindex")
 	@SequenceGenerator(sequenceName = "seq_messageindex", name="seq_messageindex", allocationSize = 1 )
-	private Long MessageIndexId;
+	private Long messageIndexId;
 	
 	private String indexName;
 
