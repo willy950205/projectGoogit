@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainPageController {
 	
 	@RequestMapping(value = "/newMainPage")
-	public String index() {
-		System.out.println("HI HELLO");
+	public String newMainPage() {
+		System.out.println("HI newMainPage");
 		return "newMainPage";
 	}
 

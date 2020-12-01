@@ -4,7 +4,20 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
+<script type="text/javascript">
+$(document).ready(function () {
+	$(".time_pause_button").click(function () {
+		alert("일시정지");
+	})
+	
+	
+	
+	$(".time_stop_button").click(function () {
+		alert("정지");
+	})
+	
+});
+</script>
 
 <html>
 <head>
@@ -13,26 +26,27 @@
 
 @charset "UTF-8";
 .navigation {
-  height: 70px;
+  height: 50px;
   background: #262626;
 }
 
 .brand {
   position: absolute;
+  left : 45%;
+  top : -12px;
   padding-left: 70px;
   float: left;
   line-height: 70px;
-  text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 .brand a,
 .brand a:visited {
   color: #ffffff;
-  text-decoration: none;
 }
 
 .nav-container {
   max-width: 100%;
+  height : 50px;
   margin: 0 auto;
 }
 
@@ -94,7 +108,7 @@ nav ul li ul li a {
   top: 0;
   right: 0;
   background: #262626;
-  height: 70px;
+  height: 50px;
   width: 70px;
 }
 
@@ -170,15 +184,21 @@ nav ul li ul li a {
 }
 }
 
-	.container{max-width:1170px; margin:auto;}
+.container{
+	
+	width:100%; 
+	margin:auto;
+}
 img{ max-width:100%;}
 .inbox_people {
-  background: #f8f8f8 none repeat scroll 0 0;
+  background: #ffffff none repeat scroll 0 0;
   float: left;
   overflow: hidden;
-  width: 40%; border-right:1px solid #c4c4c4;
+  width: 20%; border:1px solid #c4c4c4;
+  height: 87.55%;
 }
 .inbox_msg {
+  width : 138.3%;
   border: 1px solid #c4c4c4;
   clear: both;
   overflow: hidden;
@@ -187,12 +207,39 @@ img{ max-width:100%;}
 
 
 .recent_heading {float: left; width:40%;}
-.srch_bar {
+.search-bar {
   display: inline-block;
-  text-align: right;
-  width: 60%; padding:
+  text-align: left;
+  position : relative;
+  left : 66.2%;
+  top : 10%;
+  outline: none;	
 }
-.headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
+
+.search-bar:focus{
+}
+
+.contents_search_bar{
+	position : relative;
+	top : 10%;
+	left : 66%;
+	border: 0;
+	background: none;
+	outline: 0;	
+}
+
+.contents_search_bar:focus{
+	border: none;
+    outline:none;
+}
+
+
+
+.headind_srch{ 
+	padding:10px 29px 10px 20px; 
+	overflow:hidden; 
+	border-bottom:1px solid #c4c4c4;
+	}
 
 .recent_heading h4 {
   color: #05728f;
@@ -228,9 +275,14 @@ img{ max-width:100%;}
   margin: 0;
   padding: 18px 16px 10px;
 }
-.inbox_chat { height: 550px; overflow-y: scroll;}
+.inbox_chat { 
+	height: 550px; 
+	overflow-y: scroll;}
 
-.active_chat{ background:#ebebeb;}
+.active_chat{
+ background:#ebebeb;
+ height: 30px;
+ }
 
 .incoming_msg_img {
   display: inline-block;
@@ -314,7 +366,7 @@ width: 57%;}
 
 .type_msg {border-top: 1px solid #c4c4c4;position: relative;}
 .msg_send_btn {
-  background: #05728f none repeat scroll 0 0;
+  background: none none repeat scroll 0 0;
   border: medium none;
   border-radius: 50%;
   color: #fff;
@@ -322,11 +374,15 @@ width: 57%;}
   font-size: 17px;
   height: 33px;
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 11px;
   width: 33px;
 }
-.messaging { padding: 0 0 50px 0;}
+.messaging { 
+	width : 100%;
+	position : relative;
+	left : -212px;
+}
 
 .msg_history {
   height: 516px;
@@ -339,6 +395,167 @@ width: 57%;}
 	border : 1px solid #707070;
 	background-color: #00000008;
 }
+
+.srch_bar{
+	display: inline-block;
+  text-align: right;
+  width: 60%; padding:
+}
+
+.out_button{
+	background: #636363 0% 0% no-repeat padding-box;
+	border-radius: 8px;
+	opacity: 1;
+	width: 132px;
+	height: 42px;
+	position : relative;
+	top : 5px;
+	right: 20%;
+	color: white;
+	font-size: large;
+}
+
+.out_button:focus {
+	
+    outline:none;
+}
+
+.box {
+   background: #0000004D 0% 0% no-repeat padding-box;;
+   border-radius: 12px;
+   padding-bottom: 100%;
+   width: 258px;
+   height: 144px;
+}
+
+.default_box{
+	background: #00000000 0% 0% no-repeat padding-box;;
+	border : 3px solid #707070;
+	opacity : 0.5;
+    border-radius: 12px;
+    padding-bottom: 100%;
+    width: 258px;
+    height: 144px;
+}
+
+.col-lg-2, .col-md-3, .col-xs-6{
+    margin-top: 30px !important;
+    
+}
+
+.agenda_subtitle{
+	max-width : 200px;
+	font-weight: bold;
+	font-size: 1.2em;
+	position : relative;
+	left : 12%;
+	top : 24%;	
+}
+
+.agenda_time{
+	width : 10px;
+	font-weight: bold;
+	font-size: 1em;
+	position : relative;
+	left : 70%;
+	top : 3%;
+}
+
+.agenda_time_m{
+	font-weight: bold;
+	font-size: 1em;
+	width : 10px;
+	position : relative;
+	left : 80%;
+	top : -18%;
+}
+
+.agenda_left_time{
+	max-width : 200px;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-decoration : underline;
+	position : relative;
+	left : 12%;
+}
+
+.time_play_button{
+	width : 30px;
+	height : 30px;
+	border-radius: 50%;
+	position : relative;
+	left : 90%;
+	
+}
+
+.time_pause_button{
+	border : none;
+	background-color : white;
+	width : 30px;
+	height : 30px;
+	border-radius: 50%;
+	position : relative;
+	left : 70%;
+	top : -35%;
+	
+}
+
+.time_pause_button:focus{
+	outline: none;
+}
+
+.time_stop_button{
+	border : none;
+	background-color : white;
+	width : 30px;
+	height : 30px;
+	border-radius: 50%;
+	position : relative;
+	left : 70%;
+	top : -35%;
+}
+
+.time_stop_button:focus{
+	outline: none;
+}
+
+.add_circle_btn{
+	position : relative;
+	left : 40%;
+	top : 40%;
+	background: none;
+	border: none;
+}
+
+.add_circle_btn:focus{
+	outline: none;
+	
+}
+
+.link_btn{
+	background: #636363 0% 0% no-repeat padding-box;
+	border-radius: 8px;
+	opacity: 1;
+	width: 50%;
+	height: 5%;
+	position: relative;
+	left : 5%;
+}
+
+.link_btn:focus{
+	outline : none;
+}
+
+.host{
+	font-size: 1em;
+	font-weight: bold;
+	position : relative;
+	top : -16px;
+	color: #636363;
+}
+
+
+
 </style>
 
 </head>
@@ -351,42 +568,67 @@ width: 57%;}
     <nav>
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
       <ul class="nav-list">
+        
         <li>
-          <a href="#!">회의실</a>
-        </li>
-        <li>
-          <a href="#!">회의기록</a>
-        </li>
-        <li>
-          <a href="#!">회의일정</a>
-        </li>
-        <li>
-          <a href="#!"><img class="login" alt="logIn Image" src="${pageContext.servletContext.contextPath }/image/login.png"></a>
+          <button type="button" class="out_button" >회의 종료</button>
+          
         </li>
       </ul>
     </nav>
   </div>
 </header>
 
-<header class="messageSearchBar"></header>
+<header class="messageSearchBar">
+	<form style="position: relative; top: 15%;" action="">
+		<input type="text" class="search-bar"  placeholder="대화 내용 검색" ><button class="contents_search_bar" type="submit"><img style="outline : none;" alt="검색 아이콘" src="${pageContext.servletContext.contextPath }/image/searchImg.png"></button>
+	</form>
+		
+
+</header>
 <div class="container">
 <div class="messaging">
       <div class="inbox_msg">
         <div class="inbox_people">
           <div class="headind_srch">
             <div class="recent_heading">
-              <h4>Recent</h4>
+              <h4>안건</h4>
             </div>
             <div class="srch_bar">
               <div class="stylish-input-group">
-                <input type="text" class="search-bar"  placeholder="Search" >
+                <!-- <input type="text" class="search-bar"  placeholder="Search" > -->
                 <span class="input-group-addon">
                 <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
                 </span> </div>
             </div>
           </div>
           <div class="inbox_chat">
-            <div class="chat_list active_chat">
+          <!-- ==========안건박스 내부=========== -->
+          	<div class="col-lg-2 col-md-3 col-xs-6">
+        		<div style="color : white;" class="box">
+        			<h4 class="agenda_subtitle">안건 제목</h3>
+        			<h5 class="agenda_time">20</h5>
+        			<h5 class="agenda_time_m">분</h5>
+        			<p class="agenda_left_time">19' 20"</p>
+        			<button type="button" class="time_pause_button" ><img alt="일시정지" src="${pageContext.servletContext.contextPath }/image/pause_btn.png"></button>
+        			<button type="button" class="time_stop_button" ><img alt="재생" src="${pageContext.servletContext.contextPath }/image/stop_img.png"></button>
+        		</div>
+    		</div>
+    		
+    		<div class="col-lg-2 col-md-3 col-xs-6 ">
+        		<div class="box">
+        			<button type="button" class="time_play_button" ><img alt="재생" src="${pageContext.servletContext.contextPath }/image/play_arrow_img.png"></button>
+        		</div>
+    		</div>
+    		
+    		<div class="col-lg-2 col-md-3 col-xs-6 ">
+        		<div class="default_box">
+        			<button class="add_circle_btn" type="button">
+        				<img  alt="add_circle" src="${pageContext.servletContext.contextPath }/image/add_circle_img.png">
+        			</button>
+        		</div>
+    		</div>
+          
+			<!-- <div class="chat_list active_chat">
               <div class="chat_people">
                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib">
@@ -395,67 +637,9 @@ width: 57%;}
                     astrology under one roof.</p>
                 </div>
               </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
+            </div> -->          
+            
+            <!-- ===================== -->
           </div>
         </div>
         <div class="mesgs">
@@ -503,12 +687,65 @@ width: 57%;}
             </div>
           </div>
           <div class="type_msg">
-            <div class="input_msg_write">
-              <input type="text" class="write_msg" placeholder="Type a message" />
-              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+          <form action="">
+          	<div class="input_msg_write">
+             	 <input type="text" class="write_msg" placeholder="텍스트 입력" />
+                 <button class="msg_send_btn" type="button" ><img alt="chat_enter" src="${pageContext.servletContext.contextPath }/image/chatEnter.png">  </button>
+            </div>
+          
+          </form>
+          
+            
+          </div>
+        </div>
+        <!-- =================================== -->
+        <div class="inbox_people">
+          <div class="headind_srch">
+            <div class="recent_heading">
+              <h4 style="color: black; font-weight: bold;">멤버</h4>
+              
+              <!-- <button class="link_btn" type="button" >
+              	<img alt="" src="${pageContext.servletContext.contextPath }/image/link_img.png">
+              </button> -->
+              
+              
+            </div>
+            <button class="link_btn" type="button" >
+              	<img alt="" src="${pageContext.servletContext.contextPath }/image/link_img.png">
+              </button>
+            <div class="srch_bar">
+              <div class="stylish-input-group">
+                <!-- <input type="text" class="search-bar"  placeholder="Search" > -->
+                <span class="input-group-addon">
+                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                </span> </div>
+            </div>
+          </div>
+          <div class="inbox_chat">
+            <div class="chat_list active_chat">
+              <p class="host" >주최자</p>
+            </div>
+            <div class="chat_list">
+              
+            </div>
+            <div class="chat_list active_chat">
+              <p class="host" >참여자</p>
+            </div>
+            <div class="chat_list">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions 
+                    astrology under one roof.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        
+        
+        <!-- =================================== -->
       </div>
 
       

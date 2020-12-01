@@ -29,9 +29,7 @@ public class KomoranModule {
 		for(Token token : tokens){
             if(token.getPos().equals("NNG")||token.getPos().equals("NNP")||
                     token.getPos().equals("NNB")||token.getPos().equals("NP")||
-                    token.getPos().equals("NR")||token.getPos().equals("VV")||
-                    token.getPos().equals("VA")||token.getPos().equals("VX")||
-                    token.getPos().equals("VCP")||token.getPos().equals("VCN")
+                    token.getPos().equals("NR")
                     ){
                 tokenMap.put(token.getMorph(), tokenMap.getOrDefault(token.getMorph(), 0)+1);
             }
