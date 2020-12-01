@@ -11,7 +11,7 @@ import com.my.projectGoogit.domain.Participant;
 public interface ParticipantRepository extends JpaRepository<Participant, Long> {
 	
 	//MeetingId로 조회
-	@Query("select p from Participant p where p.meeting.meetinId = ?1")
+	@Query("select p from Participant p where p.meeting.meetingId = ?1")
 	List<Participant> findByMeetingId(Long meetingId);
 	
 	//MemberId로 조회

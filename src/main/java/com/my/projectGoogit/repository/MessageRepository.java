@@ -16,10 +16,10 @@ public interface MessageRepository extends JpaRepository<Message, Long> {
 
 
 	//indexId로 조회
-	@Query("select m from Message m where m. .messageIndexId = ?1")
+	@Query("select m from Message m where m.messageIndex.messageIndexId = ?1")
 	List<Message> findByMessageIndexId(Long MessageIndexId);
 	
 	//agendaId로 조회
-	@Query("select m from Message m where m.members.agenda.agendaId = ?1")
+	@Query("select m from Message m where m.agenda.agendaId = ?1")
 	List<Message> findByAgendaId(Long agendaId);
 }

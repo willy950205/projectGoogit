@@ -15,6 +15,6 @@ public interface AgendaRepository extends JpaRepository<Agenda, Long> {
 	
 	//meetingId
 	//MeetingId로 조회
-	@Query("select a from Agenda a where a.meeting.meetinId = ?1")
+	@Query("select a from Agenda a where a.meeting.meetingId = ?1")
 	List<Agenda> findByMeetingId(Long meetingId);
 }

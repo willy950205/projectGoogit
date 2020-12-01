@@ -13,6 +13,6 @@ public interface MeetingLogRepository extends JpaRepository<MeetingLog, Long> {
 	
 
 	//MeetingId로 조회
-	@Query("select ml from MeetingLog ml where ml.meeting.meetinId = ?1")
+	@Query("select ml from MeetingLog ml where ml.meeting.meetingId = ?1")
 	List<MeetingLog> findByMeetingId(Long meetingId);
 }
