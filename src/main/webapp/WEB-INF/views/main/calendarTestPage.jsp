@@ -432,14 +432,7 @@ table {
 	border-spacing: 0;
 }
 
-.container {
-	height: 269px;
-	left: 58%;
-	margin: -124px 0 0 -122.5px;
-	position: absolute;
-	top: 50%;
-	width: 250px;
-}
+
 
 /* ---------- CALENDAR ---------- */
 .calendar {
@@ -472,9 +465,9 @@ table {
 	border-radius: 50%;
 	display: inline-block;
 	height: 2em;
-	line-height: 2em;
+	line-height: 1.5em;
 	text-align: center;
-	width: 1.5em;
+	width: 2em;
 }
 
 .calendar .prev-month, .calendar .next-month {
@@ -503,6 +496,7 @@ table {
 	content: "";
 	height: 0.5em;
 	left: 50%;
+	top : 26px ;
 	margin: -0.25em 0 0 -0.25em;
 	position: absolute;
 	width: 0.5em;
@@ -599,16 +593,16 @@ table {
 						<input type="email"	class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="제목 입력">
 						<!-- 캘린더 HTML 상 -->
 						<div class="calendar_container">
-							<div class="container">
+							<div style="height: 269px; left: 50%; margin: -124px 0 0 -122.5px; position: absolute; top: 55%; width: 300px;" class="container">
 
 								<div class="calendar">
 
 									<header>
 
-										<h2>September</h2>
+										<h2 style="position : relative; left : -10%; font-weight: bold;" >11월</h2>
 
-										<a class="btn-prev fontawesome-angle-left" href="#"></a> <a
-											class="btn-next fontawesome-angle-right" href="#"></a>
+										<a  class="btn-prev fontawesome-angle-left" href="#"></a> 
+										<a style="position : absolute; left: 70%;  " class="btn-next fontawesome-angle-right" href="#"></a>
 
 									</header>
 
