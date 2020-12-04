@@ -48,6 +48,7 @@ $(document).ready(function () {
   max-width: 100%;
   height : 50px;
   margin: 0 auto;
+  background: #92AFC5;
 }
 
 nav {
@@ -67,7 +68,7 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
+  background: #92AFC5;
   color: #ffffff;
   text-decoration: none;
 }
@@ -107,7 +108,7 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: #262626;
+  background: #92AFC5;
   height: 50px;
   width: 70px;
 }
@@ -393,7 +394,7 @@ width: 57%;}
 	width: 100%;
 	height : 40px;
 	border : 1px solid #707070;
-	background-color: #00000008;
+	background-color: #D3DFE8;
 }
 
 .srch_bar{
@@ -403,7 +404,7 @@ width: 57%;}
 }
 
 .out_button{
-	background: #636363 0% 0% no-repeat padding-box;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
 	border-radius: 8px;
 	opacity: 1;
 	width: 132px;
@@ -411,7 +412,7 @@ width: 57%;}
 	position : relative;
 	top : 5px;
 	right: 20%;
-	color: white;
+	color: black;
 	font-size: large;
 }
 
@@ -426,6 +427,11 @@ width: 57%;}
    padding-bottom: 100%;
    width: 258px;
    height: 144px;
+}
+
+.recent{
+   background: #92AFC5 0% 0% no-repeat padding-box;;
+
 }
 
 .default_box{
@@ -604,7 +610,7 @@ width: 57%;}
           <div class="inbox_chat">
           <!-- ==========안건박스 내부=========== -->
           	<div class="col-lg-2 col-md-3 col-xs-6">
-        		<div style="color : white;" class="box">
+        		<div style="color : white;" class="box recent">
         			<h4 class="agenda_subtitle">안건 제목</h3>
         			<h5 class="agenda_time">20</h5>
         			<h5 class="agenda_time_m">분</h5>

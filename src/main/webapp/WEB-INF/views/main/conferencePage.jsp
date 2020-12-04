@@ -13,6 +13,16 @@
 		$(".enterButton").click(function() {
 			alert("회의 개설");
 		})
+		
+		$(".cal_left").click(function() {
+			alert("cal_left");
+		})
+		
+		$(".cal_right").click(function() {
+			alert("cal_right");
+		})
+		
+		
 
 		$(".searchImg").click(function() {
 			var inputContent = $(".url_box").val();
@@ -29,13 +39,6 @@
 	href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
 <!-- 캘린더 관련 하 -->
 <style type="text/css">
-.mainImg {
-	width: 500px;
-	position: relative;
-	left: -70px;
-	top: 130px;
-	border: none;
-}
 
 .textOne {
 	width: 300px;
@@ -116,7 +119,7 @@
 
 .navigation {
 	height: 70px;
-	background: #262626;
+	background: #92AFC5;
 }
 
 .brand {
@@ -126,6 +129,7 @@
 	line-height: 70px;
 	text-transform: uppercase;
 	font-size: 1.4em;
+	font-family: "OCR A 확장됨";
 }
 
 .brand a, .brand a:visited {
@@ -157,7 +161,7 @@ nav ul li a, nav ul li a:visited {
 	display: block;
 	padding: 0 20px;
 	line-height: 70px;
-	background: #262626;
+	background: #92AFC5;
 	color: #ffffff;
 	text-decoration: none;
 }
@@ -195,7 +199,7 @@ nav ul li ul li a {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: #262626;
+	background: #92AFC5;
 	height: 70px;
 	width: 70px;
 }
@@ -309,10 +313,11 @@ nav ul li ul li a {
 	float: left;
 	left: 330%;
 	width: 660px;
-	height: 566px;
+	height: 525px;
 }
 
 .conference_open {
+	
 	font-weight: bold;
 	max-width: 110px;
 	width: 110px;
@@ -327,7 +332,7 @@ nav ul li ul li a {
 	top: -5%;
 	width: 120px;
 	height: 40px;
-	background: #4B4B4B 0% 0% no-repeat padding-box;
+	background: #92AFC5 0% 0% no-repeat padding-box;
 	box-shadow: 0px 2px 6px #0000001A;
 	border-radius: 10px;
 	opacity: 1;
@@ -369,7 +374,7 @@ nav ul li ul li a {
 	font-weight: bold;
 	position: relative;
 	left: 55%;
-	top : -100%
+	top : -103%
 }
 
 .intended_conference{
@@ -385,7 +390,7 @@ nav ul li ul li a {
 	font-weight: bold;
 	position: relative;
 	left: 55%;
-	top : -10%;
+	top : -16%;
 }
 
 .calendar_container {
@@ -515,7 +520,7 @@ table {
 	line-height: 1em;
 	margin: -0.5em;
 	position: absolute;
-	top: 25%;
+	top: 60%;
 	width: 1em;
 }
 
@@ -546,15 +551,49 @@ table {
 	width : 160px
 }
 
+.cal_left{
+	position : absolute;
+	left : 19%;
+	top : 10%;
+	background : #ffffff;
+	width : auto;
+    border-top: 5px solid transparent;
+    border-left:  0px solid;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid #A5A5A5; 
+
+}
+
+.cal_left:focus{
+	outline: none;
+}
+
+.cal_right{
+	position : absolute;
+	left : 53%;
+	top : 10%;
+    background : #ffffff;
+	width : auto;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #A5A5A5;
+    border-bottom: 5px solid transparent;
+    border-right: 0px solid; 
+}
+
+.cal_right:focus {
+	outline: none;
+}
+
 
 </style>
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header class="navigation">
 		<div class="nav-container">
-			<div class="brand">
-				<a href="#!">Googit</a>
+			<div style="font-family: " class="brand">
+				<a style="font-family: 'Fugaz One'; " href="#!">COMEET</a>
 			</div>
 			<nav>
 				<div class="nav-mobile">
@@ -599,10 +638,11 @@ table {
 
 									<header>
 
-										<h2 style="position : relative; left : -10%; font-weight: bold;" >11월</h2>
-
-										<a  class="btn-prev fontawesome-angle-left" href="#"></a> 
-										<a style="position : absolute; left: 70%;  " class="btn-next fontawesome-angle-right" href="#"></a>
+										<h2 style="position : relative; left : -10%; font-weight: bold; font-size: 1.2em " >11월</h2>
+										<button class="cal_right" ></button>
+										<button class="cal_left" ></button>
+										<!-- <a style="position : absolute; left: 25%;  "  class="btn-prev fontawesome-angle-left" href="#"></a> --> 
+										<!-- <a style="position : absolute; left: 55%;  " class="btn-next fontawesome-angle-right" href="#"></a> -->
 
 									</header>
 
@@ -612,13 +652,13 @@ table {
 
 											<tr>
 
-												<td>Mo</td>
-												<td>Tu</td>
-												<td>We</td>
-												<td>Th</td>
-												<td>Fr</td>
-												<td>Sa</td>
-												<td>Su</td>
+												<td  style="height: 5px"  ></td>
+												<td style="height: 5px"  ></td>
+												<td style="height: 5px"  ></td>
+												<td style="height: 5px"  ></td>
+												<td style="height: 5px"  ></td>
+												<td style="height: 5px"  ></td>
+												<td style="height: 5px"  ></td>
 
 											</tr>
 
@@ -633,7 +673,7 @@ table {
 												<td class="prev-month">29</td>
 												<td class="prev-month">30</td>
 												<td class="prev-month">31</td>
-												<td>1</td>
+												<td style="color: #E95F5F" >1</td>
 											</tr>
 											<tr>
 												<td>2</td>
@@ -641,8 +681,8 @@ table {
 												<td>4</td>
 												<td>5</td>
 												<td>6</td>
-												<td>7</td>
-												<td>8</td>
+												<td style="color: #2E6ECE" >7</td>
+												<td style="color: #E95F5F" >8</td>
 											</tr>
 											<tr>
 												<td>9</td>
@@ -650,8 +690,8 @@ table {
 												<td>11</td>
 												<td>12</td>
 												<td>13</td>
-												<td>14</td>
-												<td>15</td>
+												<td style="color: #2E6ECE" >14</td>
+												<td style="color: #E95F5F" >15</td>
 											</tr>
 											<tr>
 												<td>16</td>
@@ -659,8 +699,8 @@ table {
 												<td>18</td>
 												<td>19</td>
 												<td>20</td>
-												<td class="event">21</td>
-												<td>22</td>
+												<td style="color: #2E6ECE" class="event">21</td>
+												<td style="color: #E95F5F" >22</td>
 											</tr>
 
 											<tr>
@@ -669,8 +709,8 @@ table {
 												<td>25</td>
 												<td>26</td>
 												<td>27</td>
-												<td>28</td>
-												<td>29</td>
+												<td style="color: #2E6ECE" >28</td>
+												<td style="color: #E95F5F" >29</td>
 											</tr>
 											<tr>
 												<td>30</td>

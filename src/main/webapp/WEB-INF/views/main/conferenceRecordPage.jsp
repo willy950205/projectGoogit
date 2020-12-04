@@ -35,7 +35,7 @@
 @charset "UTF-8";
 .navigation {
   height: 70px;
-  background: #262626;
+  background: #92AFC5;
 }
 
 .brand {
@@ -74,7 +74,7 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
+  background: #92AFC5;
   color: #ffffff;
   text-decoration: none;
 }
@@ -109,7 +109,7 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: #262626;
+  background: #92AFC5;
   height: 70px;
   width: 70px;
 }
@@ -144,9 +144,11 @@ nav ul li ul li a {
 @media screen and (min-width: 799px) {
   .nav-list {
     display: block !important;
+    background: #92AFC5;
   }
 }
 #nav-toggle {
+
   position: absolute;
   left: 18px;
   top: 22px;
@@ -281,13 +283,14 @@ nav ul li ul li a {
 }
 
 </style>
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
 </head>
 <body>
 <header  class="navigation">
   <div class="nav-container">
     <div class="brand">
-      <a href="#!">Googit</a>
+      <a style="font-family: 'Fugaz One' " href="#!">COMEET</a>
     </div>
     <nav>
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
